@@ -37,6 +37,11 @@ public class HojaRutaServiceRepositoryImpl implements HojaRutaService {
     }
 
     @Override
+    public List<HojaRuta> findByFecha(Date fecha) {
+        return hojaRutaRepository.findByFecha(fecha);
+    }
+
+    @Override
     public HojaRuta saveOrUpdate(HojaRuta domainObject) {
         return hojaRutaRepository.save(domainObject);
     }

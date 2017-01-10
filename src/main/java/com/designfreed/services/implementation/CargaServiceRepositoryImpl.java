@@ -1,6 +1,7 @@
 package com.designfreed.services.implementation;
 
 import com.designfreed.domain.Carga;
+import com.designfreed.domain.HojaRuta;
 import com.designfreed.repositories.CargaRepository;
 import com.designfreed.services.CargaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,11 @@ public class CargaServiceRepositoryImpl implements CargaService {
     @Override
     public Carga findById(Long id) {
         return cargaRepository.findOne(id);
+    }
+
+    @Override
+    public List<Carga> findByHojaRuta(HojaRuta hojaRuta) {
+        return cargaRepository.findByHojaRuta(hojaRuta);
     }
 
     @Override

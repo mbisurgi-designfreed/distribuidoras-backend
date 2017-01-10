@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
+import java.util.List;
 
 @RestController
 @RequestMapping("/hojaRuta")
@@ -33,5 +34,10 @@ public class HojaRutaRestController {
         Chofer chofer = choferService.findById(id);
 
         return hojaRutaService.findByFechaAndChofer(new Date(fecha), chofer);
+    }
+
+    @GetMapping("/findByFecha/{fecha}")
+    public List<HojaRuta> findByFecha(@PathVariable(name = "fecha") Long fecha) {
+        return hojaRutaService.findByFecha(new Date(fecha));
     }
 }
