@@ -26,7 +26,7 @@ public class ChoferServiceRepositoryImplTest {
     public void testFindAll() throws Exception {
         List<Chofer> choferes = choferService.findAll();
 
-        assert choferes.size() == 2;
+        assert choferes.size() == 18;
     }
 
     @Test
@@ -34,7 +34,7 @@ public class ChoferServiceRepositoryImplTest {
         Chofer chofer = choferService.findById(1L);
 
         assert chofer != null;
-        assert chofer.getNombre().equals("Maximiliano");
+        assert chofer.getNombre().equals("Rolando");
 
         System.out.println("Nombre");
         System.out.println(chofer.getNombre());

@@ -26,7 +26,7 @@ public class EnvaseServiceRepositoryImplTest {
     public void testFindAll() throws Exception {
         List<Envase> envases = envaseService.findAll();
 
-        assert envases.size() == 2;
+        assert envases.size() == 14;
     }
 
     @Test
