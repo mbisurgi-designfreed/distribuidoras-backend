@@ -5,10 +5,8 @@ import com.designfreed.domain.HojaRuta;
 import com.designfreed.services.CargaService;
 import com.designfreed.services.HojaRutaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,5 +31,20 @@ public class CargaRestController {
         HojaRuta hojaRuta = hojaRutaService.findById(id);
 
         return cargaService.findByHojaRuta(hojaRuta);
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<Carga> saveOrUpdate(@RequestBody Carga carga) {
+        Carga savedCarga = cargaService.saveOrUpdate(carga);
+
+        ResponseEntity<Carga> response;
+
+        if (savedCarga != null) {
+            response = ResponseEntity.ok(savedCarga);
+        } else {
+            response = ResponseEntity.noContent().build();
+        }
+
+        return response;
     }
 }
