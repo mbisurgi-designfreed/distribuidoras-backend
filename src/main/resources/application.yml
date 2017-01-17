@@ -2,8 +2,8 @@ spring:
   profiles:
     active: jpa_repository
   datasource:
-    url: jdbc:sqlserver://192.168.0.34\SQLEXPRESS:1433;databaseName=CRM
-    username: administrador
+    url: jdbc:sqlserver://SERVER\SQLSERVER2008;databaseName=CRM
+    username: mbisurgi
     password: maximati
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:

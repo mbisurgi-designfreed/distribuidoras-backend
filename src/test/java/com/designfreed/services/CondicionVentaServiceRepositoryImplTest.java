@@ -11,9 +11,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
-@ActiveProfiles("jpa_repository")
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
+//@ActiveProfiles("jpa_repository")
 public class CondicionVentaServiceRepositoryImplTest {
     private CondicionVentaService condicionVentaService;
 
@@ -22,14 +22,14 @@ public class CondicionVentaServiceRepositoryImplTest {
         this.condicionVentaService = condicionVentaService;
     }
 
-    @Test
+    //@Test
     public void testFindAll() throws Exception {
         List<CondicionVenta> condiciones = condicionVentaService.findAll();
 
         assert condiciones.size() == 2;
     }
 
-    @Test
+    //@Test
     public void testFindById() throws Exception {
         CondicionVenta condicionVenta = condicionVentaService.findById(1L);
 

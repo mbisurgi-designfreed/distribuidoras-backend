@@ -12,9 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
-@ActiveProfiles("jpa_repository")
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
+//@ActiveProfiles("jpa_repository")
 public class ClienteServiceRepositoryImplTest {
     private ClienteService clienteService;
 
@@ -24,14 +24,14 @@ public class ClienteServiceRepositoryImplTest {
     }
 
 
-    @Test
+    //@Test
     public void testFindAll() throws Exception {
         List<Cliente> clientes = clienteService.findAll();
 
         assert clientes.size() == 15972;
     }
 
-    @Test
+    //@Test
     public void testFindById() throws Exception {
         Cliente cliente = clienteService.findById(1L);
 

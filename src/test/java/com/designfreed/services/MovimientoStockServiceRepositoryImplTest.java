@@ -15,9 +15,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
-@ActiveProfiles("jpa_repository")
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
+//@ActiveProfiles("jpa_repository")
 public class MovimientoStockServiceRepositoryImplTest {
     private MovimientoStockService movimientoStockService;
     private EnvaseService envaseService;
@@ -51,7 +51,7 @@ public class MovimientoStockServiceRepositoryImplTest {
 //        assert movimientos.size() == 1;
 //    }
 
-    @Test
+    //@Test
     public void testFindById() throws Exception {
         MovimientoStock movimiento = movimientoStockService.findById(721L);
 

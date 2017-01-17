@@ -13,9 +13,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.Date;
 import java.util.List;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
-@ActiveProfiles("jpa_repository")
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
+//@ActiveProfiles("jpa_repository")
 public class HojaRutaServiceRepositoryImplTest {
     private HojaRutaService hojaRutaService;
     private ChoferService choferService;
@@ -37,7 +37,7 @@ public class HojaRutaServiceRepositoryImplTest {
 //        assert hojas.size() == 2;
 //    }
 
-    @Test
+    //@Test
     public void testFindById() throws Exception {
         HojaRuta hojaRuta = hojaRutaService.findById(3L);
 

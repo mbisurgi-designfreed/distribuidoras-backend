@@ -11,9 +11,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
-@ActiveProfiles("jpa_repository")
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)
+//@ActiveProfiles("jpa_repository")
 public class MovimientoServiceRepositoryImplTest {
     MovimientoService movimientoService;
 
@@ -29,7 +29,7 @@ public class MovimientoServiceRepositoryImplTest {
 //        assert movimientos.size() == 27037;
 //    }
 
-    @Test
+    //@Test
     public void testFindById() throws Exception {
         Movimiento movimiento = movimientoService.findById(14807L);
 
