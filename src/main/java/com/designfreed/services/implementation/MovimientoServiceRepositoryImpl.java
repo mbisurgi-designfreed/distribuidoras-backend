@@ -1,5 +1,6 @@
 package com.designfreed.services.implementation;
 
+import com.designfreed.domain.EstadoMovimiento;
 import com.designfreed.domain.HojaRuta;
 import com.designfreed.domain.Movimiento;
 import com.designfreed.repositories.MovimientoRepository;
@@ -33,6 +34,11 @@ public class MovimientoServiceRepositoryImpl implements MovimientoService {
     @Override
     public List<Movimiento> findByHojaRuta(HojaRuta hojaRuta) {
         return movimientoRepository.findByHojaRuta(hojaRuta);
+    }
+
+    @Override
+    public List<Movimiento> findByHojaRutaEstado(HojaRuta hojaRuta, EstadoMovimiento estadoMovimiento) {
+        return movimientoRepository.findByHojaRutaAndEstadoMovimiento(hojaRuta, estadoMovimiento);
     }
 
     @Override

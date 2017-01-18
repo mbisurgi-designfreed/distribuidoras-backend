@@ -5,10 +5,8 @@ import com.designfreed.domain.HojaRuta;
 import com.designfreed.services.ChoferService;
 import com.designfreed.services.HojaRutaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
@@ -39,5 +37,22 @@ public class HojaRutaRestController {
     @GetMapping("/findByFecha/{fecha}")
     public List<HojaRuta> findByFecha(@PathVariable(name = "fecha") Long fecha) {
         return hojaRutaService.findByFecha(new Date(fecha));
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<HojaRuta> update(@RequestBody HojaRuta hoja) {
+        hoja.setControlStock(false);
+
+        HojaRuta savedHojaRuta = hojaRutaService.saveOrUpdate(hoja);
+
+        ResponseEntity<HojaRuta> response;
+
+        if (savedHojaRuta != null) {
+            response = ResponseEntity.ok(savedHojaRuta);
+        } else {
+            response = ResponseEntity.noContent().build();
+        }
+
+        return response;
     }
 }
