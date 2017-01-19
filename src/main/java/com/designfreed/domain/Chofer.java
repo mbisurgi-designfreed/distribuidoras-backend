@@ -19,6 +19,9 @@ public class Chofer {
     @Column(name = "DNI")
     private String dni;
 
+    @Column(name = "Password")
+    private String password;
+
     public Chofer() {
     }
 
@@ -52,5 +55,13 @@ public class Chofer {
 
     public void setDni(String dni) {
         this.dni = dni;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
