@@ -30,6 +30,11 @@ public class ChoferServiceRepositoryImpl implements ChoferService {
     }
 
     @Override
+    public Chofer findByDniAndUsername(String dni, String password) {
+        return choferRepository.findByDniAndPassword(dni, password);
+    }
+
+    @Override
     public Chofer saveOrUpdate(Chofer domainObject) {
         return choferRepository.save(domainObject);
     }
