@@ -25,6 +25,10 @@ public class Movimiento {
     private CondicionVenta condicionVenta;
 
     @OneToOne
+    @JoinColumn(name = "TipoMovimientoID")
+    private TipoMovimiento tipoMovimiento;
+
+    @OneToOne
     @JoinColumn(name = "EstadoMovimientoID")
     private EstadoMovimiento estadoMovimiento;
 
@@ -69,6 +73,14 @@ public class Movimiento {
 
     public void setCondicionVenta(CondicionVenta condicionVenta) {
         this.condicionVenta = condicionVenta;
+    }
+
+    public TipoMovimiento getTipoMovimiento() {
+        return tipoMovimiento;
+    }
+
+    public void setTipoMovimiento(TipoMovimiento tipoMovimiento) {
+        this.tipoMovimiento = tipoMovimiento;
     }
 
     public EstadoMovimiento getEstadoMovimiento() {
