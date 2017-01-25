@@ -47,6 +47,11 @@ public class MovimientoServiceRepositoryImpl implements MovimientoService {
     }
 
     @Override
+    public Iterable<Movimiento> saveOrUpdateAll(List<Movimiento> movimientos) {
+        return movimientoRepository.save(movimientos);
+    }
+
+    @Override
     public void delete(Long id) {
         movimientoRepository.delete(id);
     }

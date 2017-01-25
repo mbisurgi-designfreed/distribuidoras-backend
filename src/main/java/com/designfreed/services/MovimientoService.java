@@ -9,5 +9,8 @@ import java.util.List;
 
 public interface MovimientoService extends CRUDService<Movimiento> {
     List<Movimiento> findByHojaRuta(HojaRuta hojaRuta);
+
     List<Movimiento> findByHojaRutaEstado(HojaRuta hojaRuta, EstadoMovimiento estadoMovimiento);
+
+    Iterable<Movimiento> saveOrUpdateAll(List<Movimiento> movimientos);
 }

@@ -40,6 +40,9 @@ public class Movimiento {
     @JoinColumn(name = "MovimientoEncID", referencedColumnName = "MovimientoEncID" ,nullable = false)
     private List<ItemMovimiento> items = new ArrayList<>();
 
+    @Column(name = "Sincronizado")
+    private Boolean sincronizado;
+
     public Movimiento() {
     }
 
@@ -105,5 +108,13 @@ public class Movimiento {
 
     public void setItems(List<ItemMovimiento> items) {
         this.items = items;
+    }
+
+    public Boolean getSincronizado() {
+        return sincronizado;
+    }
+
+    public void setSincronizado(Boolean sincronizado) {
+        this.sincronizado = sincronizado;
     }
 }

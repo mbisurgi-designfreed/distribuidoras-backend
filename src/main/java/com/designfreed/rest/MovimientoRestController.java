@@ -7,10 +7,8 @@ import com.designfreed.services.EstadoMovimientoService;
 import com.designfreed.services.HojaRutaService;
 import com.designfreed.services.MovimientoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -49,5 +47,20 @@ public class MovimientoRestController {
         EstadoMovimiento estadoMovimiento = estadoMovimientoService.findById(estadId);
 
         return movimientoService.findByHojaRutaEstado(hojaRuta, estadoMovimiento);
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<List<Movimiento>> add(@RequestBody List<Movimiento> movimientos) {
+        List<Movimiento> savedMovimientos = (List<Movimiento>) movimientoService.saveOrUpdateAll(movimientos);
+
+        ResponseEntity<List<Movimiento>> response;
+
+        if (savedMovimientos != null) {
+            response = ResponseEntity.ok(savedMovimientos);
+        } else {
+            response = ResponseEntity.noContent().build();
+        }
+
+        return response;
     }
 }
