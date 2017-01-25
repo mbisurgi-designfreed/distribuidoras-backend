@@ -6,6 +6,7 @@ import com.designfreed.domain.Movimiento;
 import com.designfreed.services.EstadoMovimientoService;
 import com.designfreed.services.HojaRutaService;
 import com.designfreed.services.MovimientoService;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -47,6 +48,13 @@ public class MovimientoRestController {
         EstadoMovimiento estadoMovimiento = estadoMovimientoService.findById(estadId);
 
         return movimientoService.findByHojaRutaEstado(hojaRuta, estadoMovimiento);
+    }
+
+    @GetMapping("/findByHojaRutaSincronizado/{id}/{sincronizado}")
+    public List<Movimiento> findByHojaRutaSincronizado(@PathVariable(name = "id") Long id, @PathVariable(name = "sincronizado") Boolean sincronizado) {
+        HojaRuta hojaRuta = hojaRutaService.findById(id);
+
+        return movimientoService.findByHojaRutaSincronizado(hojaRuta, sincronizado);
     }
 
     @PostMapping("/add")

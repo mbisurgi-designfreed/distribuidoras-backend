@@ -12,5 +12,7 @@ public interface MovimientoService extends CRUDService<Movimiento> {
 
     List<Movimiento> findByHojaRutaEstado(HojaRuta hojaRuta, EstadoMovimiento estadoMovimiento);
 
+    List<Movimiento> findByHojaRutaSincronizado(HojaRuta hojaRuta, Boolean sincronizado);
+
     Iterable<Movimiento> saveOrUpdateAll(List<Movimiento> movimientos);
 }
