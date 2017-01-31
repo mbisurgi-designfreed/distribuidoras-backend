@@ -17,6 +17,9 @@ public class ItemMovimiento {
     @Column(name = "Cantidad")
     private Integer cantidad;
 
+    @Column(name = "Monto")
+    private Float monto;
+
     public ItemMovimiento() {
     }
 
@@ -42,5 +45,13 @@ public class ItemMovimiento {
 
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public Float getMonto() {
+        return monto;
+    }
+
+    public void setMonto(Float monto) {
+        this.monto = monto;
     }
 }
