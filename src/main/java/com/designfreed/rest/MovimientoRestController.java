@@ -6,11 +6,10 @@ import com.designfreed.domain.Movimiento;
 import com.designfreed.services.EstadoMovimientoService;
 import com.designfreed.services.HojaRutaService;
 import com.designfreed.services.MovimientoService;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -49,5 +48,27 @@ public class MovimientoRestController {
         EstadoMovimiento estadoMovimiento = estadoMovimientoService.findById(estadId);
 
         return movimientoService.findByHojaRutaEstado(hojaRuta, estadoMovimiento);
+    }
+
+    @GetMapping("/findByHojaRutaSincronizado/{id}/{sincronizado}")
+    public List<Movimiento> findByHojaRutaSincronizado(@PathVariable(name = "id") Long id, @PathVariable(name = "sincronizado") Boolean sincronizado) {
+        HojaRuta hojaRuta = hojaRutaService.findById(id);
+
+        return movimientoService.findByHojaRutaSincronizado(hojaRuta, sincronizado);
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<List<Movimiento>> add(@RequestBody List<Movimiento> movimientos) {
+        List<Movimiento> savedMovimientos = (List<Movimiento>) movimientoService.saveOrUpdateAll(movimientos);
+
+        ResponseEntity<List<Movimiento>> response;
+
+        if (savedMovimientos != null) {
+            response = ResponseEntity.ok(savedMovimientos);
+        } else {
+            response = ResponseEntity.noContent().build();
+        }
+
+        return response;
     }
 }

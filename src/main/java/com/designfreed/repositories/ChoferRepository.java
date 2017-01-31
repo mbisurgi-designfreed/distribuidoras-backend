@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ChoferRepository extends CrudRepository<Chofer, Long> {
+    Chofer findByDniAndPassword(String dni, String password);
 }

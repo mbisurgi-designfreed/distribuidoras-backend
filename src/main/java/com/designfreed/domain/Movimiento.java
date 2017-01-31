@@ -25,6 +25,10 @@ public class Movimiento {
     private CondicionVenta condicionVenta;
 
     @OneToOne
+    @JoinColumn(name = "TipoMovimientoID")
+    private TipoMovimiento tipoMovimiento;
+
+    @OneToOne
     @JoinColumn(name = "EstadoMovimientoID")
     private EstadoMovimiento estadoMovimiento;
 
@@ -35,6 +39,9 @@ public class Movimiento {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     @JoinColumn(name = "MovimientoEncID", referencedColumnName = "MovimientoEncID" ,nullable = false)
     private List<ItemMovimiento> items = new ArrayList<>();
+
+    @Column(name = "Sincronizado")
+    private Boolean sincronizado;
 
     public Movimiento() {
     }
@@ -71,6 +78,14 @@ public class Movimiento {
         this.condicionVenta = condicionVenta;
     }
 
+    public TipoMovimiento getTipoMovimiento() {
+        return tipoMovimiento;
+    }
+
+    public void setTipoMovimiento(TipoMovimiento tipoMovimiento) {
+        this.tipoMovimiento = tipoMovimiento;
+    }
+
     public EstadoMovimiento getEstadoMovimiento() {
         return estadoMovimiento;
     }
@@ -93,5 +108,13 @@ public class Movimiento {
 
     public void setItems(List<ItemMovimiento> items) {
         this.items = items;
+    }
+
+    public Boolean getSincronizado() {
+        return sincronizado;
+    }
+
+    public void setSincronizado(Boolean sincronizado) {
+        this.sincronizado = sincronizado;
     }
 }

@@ -11,5 +11,8 @@ import java.util.List;
 @Repository
 public interface MovimientoRepository extends CrudRepository<Movimiento, Long> {
     List<Movimiento> findByHojaRuta(HojaRuta hojaRuta);
+
     List<Movimiento> findByHojaRutaAndEstadoMovimiento(HojaRuta hojaRuta, EstadoMovimiento estadoMovimiento);
+
+    List<Movimiento> findByHojaRutaAndSincronizado(HojaRuta hojaRuta, Boolean sincronizado);
 }

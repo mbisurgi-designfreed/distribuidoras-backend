@@ -42,8 +42,18 @@ public class MovimientoServiceRepositoryImpl implements MovimientoService {
     }
 
     @Override
+    public List<Movimiento> findByHojaRutaSincronizado(HojaRuta hojaRuta, Boolean sincronizado) {
+        return movimientoRepository.findByHojaRutaAndSincronizado(hojaRuta, sincronizado);
+    }
+
+    @Override
     public Movimiento saveOrUpdate(Movimiento domainObject) {
         return movimientoRepository.save(domainObject);
+    }
+
+    @Override
+    public Iterable<Movimiento> saveOrUpdateAll(List<Movimiento> movimientos) {
+        return movimientoRepository.save(movimientos);
     }
 
     @Override

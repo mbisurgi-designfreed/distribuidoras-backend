@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 @Profile("jpa_repository")
 public class CargaServiceRepositoryImpl implements CargaService {
-    CargaRepository cargaRepository;
+    private CargaRepository cargaRepository;
 
     @Autowired
     public void setCargaRepository(CargaRepository cargaRepository) {
