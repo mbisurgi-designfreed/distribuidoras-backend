@@ -1,5 +1,7 @@
 package com.designfreed.domain;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,6 +37,12 @@ public class Movimiento {
     @ManyToOne()
     @JoinColumn(name = "HojaRutaID")
     private HojaRuta hojaRuta;
+
+    @Column(name = "Visito")
+    private Boolean visito;
+
+    @Column(name = "Vendio")
+    private Boolean vendio;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     @JoinColumn(name = "MovimientoEncID", referencedColumnName = "MovimientoEncID" ,nullable = false)
@@ -100,6 +108,22 @@ public class Movimiento {
 
     public void setHojaRuta(HojaRuta hojaRuta) {
         this.hojaRuta = hojaRuta;
+    }
+
+    public Boolean getVisito() {
+        return visito;
+    }
+
+    public void setVisito(Boolean visito) {
+        this.visito = visito;
+    }
+
+    public Boolean getVendio() {
+        return vendio;
+    }
+
+    public void setVendio(Boolean vendio) {
+        this.vendio = vendio;
     }
 
     public List<ItemMovimiento> getItems() {
