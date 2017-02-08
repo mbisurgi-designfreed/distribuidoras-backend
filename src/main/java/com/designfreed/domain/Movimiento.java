@@ -44,6 +44,10 @@ public class Movimiento {
     @Column(name = "Vendio")
     private Boolean vendio;
 
+    @OneToOne
+    @JoinColumn(name = "MotivoID")
+    private Motivo motivo;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     @JoinColumn(name = "MovimientoEncID", referencedColumnName = "MovimientoEncID" ,nullable = false)
     private List<ItemMovimiento> items = new ArrayList<>();
