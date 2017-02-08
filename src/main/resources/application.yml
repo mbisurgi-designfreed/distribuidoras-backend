@@ -6,6 +6,10 @@ spring:
     username: mbisurgi
     password: maximati
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    url: jdbc:sqlserver://SERVER\SQLEXPRESS;databaseName=CRM
+#    username: administrador
+#    password: maximati
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     show-sql: true
     hibernate:
