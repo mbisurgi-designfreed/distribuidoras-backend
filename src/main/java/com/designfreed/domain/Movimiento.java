@@ -130,6 +130,14 @@ public class Movimiento {
         this.vendio = vendio;
     }
 
+    public Motivo getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(Motivo motivo) {
+        this.motivo = motivo;
+    }
+
     public List<ItemMovimiento> getItems() {
         return items;
     }
