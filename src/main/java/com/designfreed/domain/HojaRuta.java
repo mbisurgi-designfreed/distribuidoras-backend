@@ -24,6 +24,9 @@ public class HojaRuta {
     @Column(name = "ControlStock")
     private Boolean controlStock;
 
+    @Column(name = "CierreMobile")
+    private Boolean cierreMobile;
+
     public HojaRuta() {
     }
 
@@ -65,5 +68,13 @@ public class HojaRuta {
 
     public void setControlStock(Boolean controlStock) {
         this.controlStock = controlStock;
+    }
+
+    public Boolean getCierreMobile() {
+        return cierreMobile;
+    }
+
+    public void setCierreMobile(Boolean cierreMobile) {
+        this.cierreMobile = cierreMobile;
     }
 }
