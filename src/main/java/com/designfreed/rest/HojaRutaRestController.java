@@ -41,8 +41,6 @@ public class HojaRutaRestController {
 
     @PostMapping("/update")
     public ResponseEntity<HojaRuta> update(@RequestBody HojaRuta hoja) {
-        hoja.setControlStock(false);
-
         HojaRuta savedHojaRuta = hojaRutaService.saveOrUpdate(hoja);
 
         ResponseEntity<HojaRuta> response;
