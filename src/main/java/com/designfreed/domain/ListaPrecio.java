@@ -18,8 +18,7 @@ public class ListaPrecio {
     @Column(name = "ListaPrecioNombre")
     private String listaPrecioNombre;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
-    @LazyCollection(LazyCollectionOption.FALSE)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     @JoinColumn(name = "ListaPrecioID", referencedColumnName = "ListaPrecioID" ,nullable = false)
     private List<ItemListaPrecio> items = new ArrayList<>();
 

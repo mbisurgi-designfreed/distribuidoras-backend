@@ -33,7 +33,6 @@ public class MovimientoStock {
     private String nroComprobante;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
-    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinColumn(name = "MovimientoStockEncID", referencedColumnName = "MovimientoStockEncID" ,nullable = false)
     private List<ItemMovimientoStock> items = new ArrayList<>();
 

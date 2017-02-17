@@ -51,7 +51,6 @@ public class Movimiento {
     private Motivo motivo;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
-    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinColumn(name = "MovimientoEncID", referencedColumnName = "MovimientoEncID" ,nullable = false)
     private List<ItemMovimiento> items = new ArrayList<>();
 

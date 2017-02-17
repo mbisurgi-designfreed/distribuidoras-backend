@@ -26,12 +26,10 @@ public class Cliente {
     private String telefono;
 
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinColumn(name = "CondicionVentaID")
     private CondicionVenta condicionVenta;
 
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinColumn(name = "ListaPrecioID")
     private ListaPrecio listaPrecio;
 
