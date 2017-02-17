@@ -4,11 +4,13 @@ import com.designfreed.domain.EstadoEnvase;
 import com.designfreed.repositories.EstadoEnvaseRepository;
 import com.designfreed.services.EstadoEnvaseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Profile("jpa_repository")
 public class EstadoEnvaseServiceRepositoryImpl implements EstadoEnvaseService {
     private EstadoEnvaseRepository estadoEnvaseRepository;
 
