@@ -1,5 +1,8 @@
 package com.designfreed.domain;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +19,7 @@ public class ListaPrecio {
     private String listaPrecioNombre;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinColumn(name = "ListaPrecioID", referencedColumnName = "ListaPrecioID" ,nullable = false)
     private List<ItemListaPrecio> items = new ArrayList<>();
 

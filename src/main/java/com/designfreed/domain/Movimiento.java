@@ -1,6 +1,8 @@
 package com.designfreed.domain;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -49,6 +51,7 @@ public class Movimiento {
     private Motivo motivo;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinColumn(name = "MovimientoEncID", referencedColumnName = "MovimientoEncID" ,nullable = false)
     private List<ItemMovimiento> items = new ArrayList<>();
 
