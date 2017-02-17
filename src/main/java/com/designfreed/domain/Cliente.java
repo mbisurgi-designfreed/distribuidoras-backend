@@ -26,6 +26,10 @@ public class Cliente {
     @JoinColumn(name = "CondicionVentaID")
     private CondicionVenta condicionVenta;
 
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "ListaPrecioID")
+    private ListaPrecio listaPrecio;
+
     public Cliente() {
     }
 
@@ -75,5 +79,13 @@ public class Cliente {
 
     public void setCondicionVenta(CondicionVenta condicionVenta) {
         this.condicionVenta = condicionVenta;
+    }
+
+    public ListaPrecio getListaPrecio() {
+        return listaPrecio;
+    }
+
+    public void setListaPrecio(ListaPrecio listaPrecio) {
+        this.listaPrecio = listaPrecio;
     }
 }
