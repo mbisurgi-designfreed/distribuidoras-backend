@@ -1,7 +1,7 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.EstadoMovimiento;
-import com.designfreed.repositories.EstadoMovimientoRepository;
+import com.designfreed.crm.domain.EstadoMovimiento;
+import com.designfreed.crm.repositories.EstadoMovimientoRepository;
 import com.designfreed.services.EstadoMovimientoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

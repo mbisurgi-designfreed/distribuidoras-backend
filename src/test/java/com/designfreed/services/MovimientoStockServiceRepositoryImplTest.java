@@ -1,19 +1,7 @@
 package com.designfreed.services;
 
-import com.designfreed.configuration.JpaIntegrationConfiguration;
-import com.designfreed.domain.EstadoEnvase;
-import com.designfreed.domain.ItemMovimientoStock;
-import com.designfreed.domain.MovimientoStock;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import com.designfreed.crm.domain.MovimientoStock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@SpringApplicationConfiguration(JpaIntegrationConfiguration.class)

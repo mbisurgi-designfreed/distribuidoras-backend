@@ -1,7 +1,7 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.TipoMovimiento;
-import com.designfreed.repositories.TipoMovimientoRepository;
+import com.designfreed.crm.domain.TipoMovimiento;
+import com.designfreed.crm.repositories.TipoMovimientoRepository;
 import com.designfreed.services.TipoMovimientoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

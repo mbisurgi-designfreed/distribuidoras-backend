@@ -1,7 +1,7 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.Cliente;
-import com.designfreed.repositories.ClienteRepository;
+import com.designfreed.crm.domain.Cliente;
+import com.designfreed.crm.repositories.ClienteRepository;
 import com.designfreed.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

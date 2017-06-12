@@ -1,7 +1,7 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.Chofer;
-import com.designfreed.repositories.ChoferRepository;
+import com.designfreed.crm.domain.Chofer;
+import com.designfreed.crm.repositories.ChoferRepository;
 import com.designfreed.services.ChoferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

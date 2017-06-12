@@ -1,7 +1,7 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.CondicionVenta;
-import com.designfreed.repositories.CondicionVentaRepository;
+import com.designfreed.crm.domain.CondicionVenta;
+import com.designfreed.crm.repositories.CondicionVentaRepository;
 import com.designfreed.services.CondicionVentaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

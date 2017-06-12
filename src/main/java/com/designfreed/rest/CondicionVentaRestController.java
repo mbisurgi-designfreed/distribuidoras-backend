@@ -1,6 +1,6 @@
 package com.designfreed.rest;
 
-import com.designfreed.domain.CondicionVenta;
+import com.designfreed.crm.domain.CondicionVenta;
 import com.designfreed.services.CondicionVentaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

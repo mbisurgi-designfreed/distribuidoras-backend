@@ -1,12 +1,11 @@
 package com.designfreed.rest;
 
-import com.designfreed.domain.EstadoMovimiento;
-import com.designfreed.domain.HojaRuta;
-import com.designfreed.domain.Movimiento;
+import com.designfreed.crm.domain.EstadoMovimiento;
+import com.designfreed.crm.domain.HojaRuta;
+import com.designfreed.crm.domain.Movimiento;
 import com.designfreed.services.EstadoMovimientoService;
 import com.designfreed.services.HojaRutaService;
 import com.designfreed.services.MovimientoService;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

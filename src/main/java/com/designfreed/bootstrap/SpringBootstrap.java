@@ -1,6 +1,6 @@
 package com.designfreed.bootstrap;
 
-import com.designfreed.domain.*;
+import com.designfreed.crm.domain.*;
 import com.designfreed.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;

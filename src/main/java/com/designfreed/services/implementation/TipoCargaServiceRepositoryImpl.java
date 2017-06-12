@@ -1,7 +1,7 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.TipoCarga;
-import com.designfreed.repositories.TipoCargaRepository;
+import com.designfreed.crm.domain.TipoCarga;
+import com.designfreed.crm.repositories.TipoCargaRepository;
 import com.designfreed.services.TipoCargaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

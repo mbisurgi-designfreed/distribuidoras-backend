@@ -1,8 +1,8 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.Chofer;
-import com.designfreed.domain.HojaRuta;
-import com.designfreed.repositories.HojaRutaRepository;
+import com.designfreed.crm.domain.Chofer;
+import com.designfreed.crm.domain.HojaRuta;
+import com.designfreed.crm.repositories.HojaRutaRepository;
 import com.designfreed.services.HojaRutaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

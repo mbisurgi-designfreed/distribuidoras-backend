@@ -1,8 +1,8 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.Carga;
-import com.designfreed.domain.HojaRuta;
-import com.designfreed.repositories.CargaRepository;
+import com.designfreed.crm.domain.Carga;
+import com.designfreed.crm.domain.HojaRuta;
+import com.designfreed.crm.repositories.CargaRepository;
 import com.designfreed.services.CargaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

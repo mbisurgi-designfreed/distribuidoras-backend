@@ -1,7 +1,7 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.EstadoEnvase;
-import com.designfreed.repositories.EstadoEnvaseRepository;
+import com.designfreed.crm.domain.EstadoEnvase;
+import com.designfreed.crm.repositories.EstadoEnvaseRepository;
 import com.designfreed.services.EstadoEnvaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

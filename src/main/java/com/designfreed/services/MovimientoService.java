@@ -1,8 +1,8 @@
 package com.designfreed.services;
 
-import com.designfreed.domain.EstadoMovimiento;
-import com.designfreed.domain.HojaRuta;
-import com.designfreed.domain.Movimiento;
+import com.designfreed.crm.domain.EstadoMovimiento;
+import com.designfreed.crm.domain.HojaRuta;
+import com.designfreed.crm.domain.Movimiento;
 import com.designfreed.services.generics.CRUDService;
 
 import java.util.List;

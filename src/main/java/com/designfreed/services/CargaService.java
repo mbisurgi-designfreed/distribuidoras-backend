@@ -1,7 +1,7 @@
 package com.designfreed.services;
 
-import com.designfreed.domain.Carga;
-import com.designfreed.domain.HojaRuta;
+import com.designfreed.crm.domain.Carga;
+import com.designfreed.crm.domain.HojaRuta;
 import com.designfreed.services.generics.CRUDService;
 
 import java.util.List;

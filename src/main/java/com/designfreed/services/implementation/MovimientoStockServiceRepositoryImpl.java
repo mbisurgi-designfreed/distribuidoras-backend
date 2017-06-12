@@ -1,7 +1,7 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.MovimientoStock;
-import com.designfreed.repositories.MovimientoStockRepository;
+import com.designfreed.crm.domain.MovimientoStock;
+import com.designfreed.crm.repositories.MovimientoStockRepository;
 import com.designfreed.services.MovimientoStockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

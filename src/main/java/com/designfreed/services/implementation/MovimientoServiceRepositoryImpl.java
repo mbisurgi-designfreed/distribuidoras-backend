@@ -1,9 +1,9 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.EstadoMovimiento;
-import com.designfreed.domain.HojaRuta;
-import com.designfreed.domain.Movimiento;
-import com.designfreed.repositories.MovimientoRepository;
+import com.designfreed.crm.domain.EstadoMovimiento;
+import com.designfreed.crm.domain.HojaRuta;
+import com.designfreed.crm.domain.Movimiento;
+import com.designfreed.crm.repositories.MovimientoRepository;
 import com.designfreed.services.MovimientoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

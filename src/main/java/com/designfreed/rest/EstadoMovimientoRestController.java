@@ -1,7 +1,6 @@
 package com.designfreed.rest;
 
-import com.designfreed.domain.EstadoEnvase;
-import com.designfreed.domain.EstadoMovimiento;
+import com.designfreed.crm.domain.EstadoMovimiento;
 import com.designfreed.services.EstadoMovimientoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

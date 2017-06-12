@@ -1,6 +1,6 @@
 package com.designfreed.rest;
 
-import com.designfreed.domain.Cliente;
+import com.designfreed.crm.domain.Cliente;
 import com.designfreed.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

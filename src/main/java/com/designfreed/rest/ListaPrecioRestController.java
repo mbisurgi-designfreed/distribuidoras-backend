@@ -1,6 +1,6 @@
 package com.designfreed.rest;
 
-import com.designfreed.domain.ListaPrecio;
+import com.designfreed.crm.domain.ListaPrecio;
 import com.designfreed.services.ListaPrecioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

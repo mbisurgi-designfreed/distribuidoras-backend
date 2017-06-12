@@ -1,7 +1,7 @@
 package com.designfreed.rest;
 
-import com.designfreed.domain.Carga;
-import com.designfreed.domain.HojaRuta;
+import com.designfreed.crm.domain.Carga;
+import com.designfreed.crm.domain.HojaRuta;
 import com.designfreed.services.CargaService;
 import com.designfreed.services.HojaRutaService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.designfreed.services.implementation;
 
-import com.designfreed.domain.ListaPrecio;
-import com.designfreed.repositories.ListaPrecioRepository;
+import com.designfreed.crm.domain.ListaPrecio;
+import com.designfreed.crm.repositories.ListaPrecioRepository;
 import com.designfreed.services.ListaPrecioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;

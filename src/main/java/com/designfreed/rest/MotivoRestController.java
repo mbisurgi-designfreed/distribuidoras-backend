@@ -1,6 +1,6 @@
 package com.designfreed.rest;
 
-import com.designfreed.domain.Motivo;
+import com.designfreed.crm.domain.Motivo;
 import com.designfreed.services.MotivoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
