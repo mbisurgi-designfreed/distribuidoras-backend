@@ -3,8 +3,6 @@ package com.designfreed.configuration;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
-import com.designfreed.services.EmpresaService;
-import com.designfreed.services.implementation.EmpresaServiceRepositoryImpl;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
