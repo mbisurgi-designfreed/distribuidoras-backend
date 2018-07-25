@@ -58,6 +58,13 @@ public class MovimientoRestController {
 
     @PostMapping("/add")
     public ResponseEntity<List<Movimiento>> add(@RequestBody List<Movimiento> movimientos) {
+        movimientos.forEach((movimiento -> {
+            if (movimiento.getEstadoMovimiento().getId() == 3) {
+                movimiento.setVisito(true);
+                movimiento.setVendio(true);
+            }
+        }));
+
         List<Movimiento> savedMovimientos = (List<Movimiento>) movimientoService.saveOrUpdateAll(movimientos);
 
         ResponseEntity<List<Movimiento>> response;

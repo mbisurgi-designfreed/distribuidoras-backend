@@ -3,7 +3,15 @@ spring:
     active: jpa_repository
   datasource:
     crm:
-#      url: jdbc:sqlserver://SERVER\SQLSERVER2008;databaseName=CRM
+#      url: jdbc:sqlserver://192.168.1.11\WIN-646GLNJ8DGA:1433;database=CRM
+#      username: sa
+#      password: maximati
+#      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://bybgas.dyndns.org\WIN-646GLNJ8DGA:1730;database=CRM
+      username: sa
+      password: maximati
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#      url: jdbc:sqlserver://PC_FACTURACION\SQLSERVEREXPRESS;databaseName=CRM
 #      username: mbisurgi
 #      password: maximati
 #      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
@@ -11,10 +19,10 @@ spring:
 #      username: administrador
 #      password: maximati
 #      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-      url: jdbc:sqlserver://186.153.8.242\SERVER\SQLEXPRESS:1433;databaseName=CRM
-      username: administrador
-      password: maximati
-      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#      url: jdbc:sqlserver://186.153.8.242\SERVER\SQLEXPRESS:1433;databaseName=CRM
+#      username: administrador
+#      password: maximati
+#      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     consolidado:
       url: jdbc:sqlserver://centrocompartido.engux.com.ar\WIN-646GLNJ8DGA\AXSQLEXPRESS:1550;databaseName=Consolidado
       username: sa

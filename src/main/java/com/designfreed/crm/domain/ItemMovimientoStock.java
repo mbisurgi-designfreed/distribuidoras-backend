@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "MovimientosStockDet")
 public class ItemMovimientoStock {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MovimientoStockDetID")
     private Long id;
 

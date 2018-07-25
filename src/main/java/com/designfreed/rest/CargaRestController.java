@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/carga")
+@CrossOrigin
 public class CargaRestController {
     private CargaService cargaService;
     private HojaRutaService hojaRutaService;
@@ -30,7 +31,7 @@ public class CargaRestController {
     public List<Carga> findByHojaRuta(@PathVariable(name = "id") Long id) {
         HojaRuta hojaRuta = hojaRutaService.findById(id);
 
-        return cargaService.findByHojaRuta(hojaRuta);
+            return cargaService.findByHojaRuta(hojaRuta);
     }
 
     @PostMapping("/add")

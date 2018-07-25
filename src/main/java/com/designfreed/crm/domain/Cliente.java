@@ -19,6 +19,16 @@ public class Cliente {
     @Column(name = "Altura")
     private String altura;
 
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "ZonaSubID")
+    private SubZona subZona;
+
+    @Column(name = "Latitud")
+    private Double lat;
+
+    @Column(name = "Longitud")
+    private Double lng;
+
     @Column(name = "Telefono")
     private String telefono;
 
@@ -63,6 +73,22 @@ public class Cliente {
 
     public void setAltura(String altura) {
         this.altura = altura;
+    }
+
+    public Double getLat() {
+        return lat;
+    }
+
+    public void setLat(Double lat) {
+        this.lat = lat;
+    }
+
+    public Double getLng() {
+        return lng;
+    }
+
+    public void setLng(Double lng) {
+        this.lng = lng;
     }
 
     public String getTelefono() {

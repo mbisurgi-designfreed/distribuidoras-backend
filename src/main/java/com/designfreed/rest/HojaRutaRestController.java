@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/hojaRuta")
+@CrossOrigin
 public class HojaRutaRestController {
     private HojaRutaService hojaRutaService;
     private ChoferService choferService;
@@ -37,6 +38,21 @@ public class HojaRutaRestController {
     @GetMapping("/findByFecha/{fecha}")
     public List<HojaRuta> findByFecha(@PathVariable(name = "fecha") Long fecha) {
         return hojaRutaService.findByFecha(new Date(fecha));
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<HojaRuta> add(@RequestBody HojaRuta hoja) {
+        HojaRuta savedHojaRuta = hojaRutaService.saveOrUpdate(hoja);
+
+        ResponseEntity<HojaRuta> response;
+
+        if (savedHojaRuta != null) {
+            response = ResponseEntity.ok(savedHojaRuta);
+        } else {
+            response = ResponseEntity.noContent().build();
+        }
+
+        return response;
     }
 
     @PostMapping("/update")
